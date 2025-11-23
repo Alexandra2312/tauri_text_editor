@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="/src/styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Text Editor App</title>
+    <script type="module" src="/src/main.ts" defer></script>
+  </head>
+
+  <body>
+    <main class="container">
+      <h1>Text Editor</h1>
+
+      <form class="row" id="greet-form">
+        <input id="greet-input" placeholder="Enter url..." />
+        <button type="submit">Submit</button>
+      </form>
+      <p id="greet-msg"></p>
+
+      <div class="editor-layout">
+        <div class="sidebar">
+          <h2 class="sidebar-title">Files</h2>
+          <ul class="file-tree">
+            <li class="folder">
+              <span class="arrow">▶</span>
+              <span class="folder-icon">📁</span>
+              <span class="folder-name">src</span>
+              <ul class="nested">
+                <li class="file">
+                  <span class="file-icon">📄</span>
+                  <span class="file-name">main.ts</span>
+                </li>
+                <li class="file">
+                  <span class="file-icon">📄</span>
+                  <span class="file-name">styles.css</span>
+                </li>
+                <li class="folder">
+                  <span class="arrow">▶</span>
+                  <span class="folder-icon">📁</span>
+                  <span class="folder-name">assets</span>
+                  <ul class="nested">
+                    <li class="file">
+                      <span class="file-icon">📄</span>
+                      <span class="file-name">tauri.svg</span>
+                    </li>
+                    <li class="file">
+                      <span class="file-icon">📄</span>
+                      <span class="file-name">vite.svg</span>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="file">
+              <span class="file-icon">📄</span>
+              <span class="file-name">index.html</span>
+            </li>
+            <li class="file">
+              <span class="file-icon">📄</span>
+              <span class="file-name">package.json</span>
+            </li>
+            <li class="folder">
+              <span class="arrow">▶</span>
+              <span class="folder-icon">📁</span>
+              <span class="folder-name">src-tauri</span>
+              <ul class="nested">
+                <li class="file">
+                  <span class="file-icon">📄</span>
+                  <span class="file-name">Cargo.toml</span>
+                </li>
+                <li class="file">
+                  <span class="file-icon">📄</span>
+                  <span class="file-name">tauri.conf.json</span>
+                </li>
+                <li class="folder">
+                  <span class="arrow">▶</span>
+                  <span class="folder-icon">📁</span>
+                  <span class="folder-name">src</span>
+                  <ul class="nested">
+                    <li class="file">
+                      <span class="file-icon">📄</span>
+                      <span class="file-name">main.rs</span>
+                    </li>
+                    <li class="file">
+                      <span class="file-icon">📄</span>
+                      <span class="file-name">lib.rs</span>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <div class="textarea-container">
+          <label for="text-editor">Text Editor:</label>
+          <textarea 
+            id="text-editor" 
+            rows="10" 
+            cols="50" 
+            placeholder="Enter your text here...">
+          </textarea>
+        </div>
+      </div>
+
+      <div class="button-group">
+        <button id="open-btn" type="button" class="btn-primary">
+          <span class="btn-icon"></span>
+          Open
+        </button>
+        <button id="save-btn" type="button" class="btn-primary">
+          <span class="btn-icon"></span>
+          Save
+        </button>
+      </div>
+      <button id="newFile-btn" type="button" class="btn-primary">
+          <span class="btn-icon"></span>
+          📄 Create File
+        </button>
+      </div>
+
+      <p id="save-form"></p>
+    </main>
+  </body>
+</html>
